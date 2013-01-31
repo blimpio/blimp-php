@@ -1,11 +1,10 @@
 <?php
 
-require_once 'Requests/library/Requests.php';
-Requests::register_autoloader();
+namespace Blimp;
 
+use Requests;
 
 DEFINE("API_ENDPOINT", "https://app.getblimp.com/api/v2");
-
 
 class Client {
 

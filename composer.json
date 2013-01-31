@@ -1,0 +1,23 @@
+{
+	"name": "blimp/client",
+	"type": "library",
+	"description": "PHP client library for interacting with the Blimp API (www.getblimp.com).",
+	"keywords": ["blimp", "client", "project management"],
+	"homepage": "https://github.com/GetBlimp/blimp-php",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "José Padilla",
+			"homepage": "http://jpadilla.com/"
+		}
+	],
+	"require": {
+		"php": ">=5.3.2",
+		"rmccue/requests": "dev-master"
+	},
+	"autoload": {
+		"psr-0": {
+			"Blimp": "src/"
+		}
+	}
+}
