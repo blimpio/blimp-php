@@ -1,16 +1,16 @@
 <?php
 
+require_once '../src/BlimpClient.php';
+
 ini_set('display_errors', 'On');
 error_reporting(E_ALL);
-
-require_once '../src/BlimpAPI.class.php';
 
 $username = '';
 $api_key = '';
 $app_id = '';
 $app_secret = '';
 
-$client = new Client($username, $api_key, $app_id, $app_secret);
+$client = new BlimpClient($username, $api_key, $app_id, $app_secret);
 $companies = $client->get('company');
 $rate_limit = $client->getRateLimitStatus();
 

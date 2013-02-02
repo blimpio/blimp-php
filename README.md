@@ -14,6 +14,22 @@ Using Github:
 git clone git@github.com:getblimp/blimp-php
 ````
 
+Using [Composer](http://getcomposer.org/):
+
+```
+{
+	"require": {
+		"blimp/client": "dev-master"
+	}
+}
+```
+
+Then run:
+
+```
+composer install
+```
+
 ## Pre-Usage
 
 Before we begin using the library you need to signup to [Blimp](http://app.getblimp.com/) and generate a new API Key if you don't have one in your [settings](https://app.getblimp.com/user/settings/api/) as well as an Application ID and Secret in your [applications](https://app.getblimp.com/user/settings/api/developers/).
@@ -21,9 +37,16 @@ Before we begin using the library you need to signup to [Blimp](http://app.getbl
 ## Usage
 
 ```php
-require_once 'src/BlimpAPI.class.php';
 
-$client = new Client($username, $api_key, $app_id, $app_secret);
+# load the client using Composer's autoloader
+require_once 'vendor/autoload.php';
+
+$client = new Blimp\Client($username, $api_key, $app_id, $app_secret);
+
+# or load the client without an autoloader
+require_once 'src/BlimpClient.php';
+
+$client = new BlimpClient($username, $api_key, $app_id, $app_secret);
 
 # get all companies that I'm part of
 $companies = $client->get('company');
