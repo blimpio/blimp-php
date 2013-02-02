@@ -1,4 +1,7 @@
 # blimp-php
+
+[![Build Status](https://travis-ci.org/GetBlimp/blimp-php.png?branch=master)](https://travis-ci.org/GetBlimp/blimp-php)
+
 This library allows you to interact with the Blimp API using PHP. You can find more information
 about Blimp's Public API documentation at [http://dev.getblimp.com/](http://dev.getblimp.com/).
 If you have any problems or requests please contact [support](mailto:support@getblimp.com?subject=Blimp API PHP library).
